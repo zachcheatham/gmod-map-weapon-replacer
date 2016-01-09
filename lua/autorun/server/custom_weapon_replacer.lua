@@ -71,5 +71,5 @@ hook.Add("OnEntityCreated", "CustomWeaponReplacer", entityCreated)
 concommand.Add("fix_ents", replaceAllWeapons)
 
 hook.Add("PostCleanupMap", "CustomWeaponReplacer", function()
-	replaceAllWeapons()
+	timer.Simple(0.1, replaceAllWeapons)
 end)
